@@ -1,0 +1,24 @@
+package top.zllr.onebot.sdk.event;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+ * Description:
+ * Author: cnlimiter
+ * Date: 2022/10/3 13:20
+ * Version: 1.0
+ */
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class IgnoreEvent extends Event{
+    public IgnoreEvent(){
+        this.setPostType("IGNORED");
+        this.setTime(System.currentTimeMillis());
+    }
+    public IgnoreEvent(long id){
+        this.setPostType("IGNORED");
+        this.setTime(System.currentTimeMillis());
+        this.setSelfId(id);
+    }
+}

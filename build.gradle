@@ -6,7 +6,7 @@ plugins {
 version = project.sdk_version
 group = project.maven_group
 
-def targetJavaVersion = 8
+def targetJavaVersion = 17
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
@@ -50,7 +50,7 @@ publishing {
             pom {
                 name = 'OneBot SDK'
                 description = '基于 [OneBot] 标准的通用 SDK'
-                url = 'https://github.com/cnlimiter/onebot-sdk'
+                url = 'https://github.com/lrzl/onebot-sdk'
                 licenses {
                     license {
                         name = 'AGPLV3'
